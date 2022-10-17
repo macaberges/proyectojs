@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+  </head>
+
+  <body>
+    <div>
+      <nav class="navbar bg-transparent fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+            ><img
+              src="./img/logo.png"
+              alt="Logo"
+              width="40"
+              height="40"
+              class="d-inline-block align-text-center"
+            />
+            BLOOMING BOUQUET</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                BLOOMING BOUQUET
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Store</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contact</a>
+                </li>
+              </ul>
+              <form class="d-flex" role="search">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button class="btn btn-outline-success" type="submit">
+                  Search
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container-main p-5">
+      <div class="subtitle">
+        Step into spring with a colorful bouquet
+        <hr size="4px" color="black" width="150px" />
+      </div>
+      <div class="title">
+        SPRING <br />IS<br />
+        HERE
+      </div>
+
+      <button type="button" class="btn btn-light">♥ SHOP NOW ♥</button>
+    </div>
+
+    <div class="container-about">
+      <div class="about w-50 shadow p-3 mb-5 bg-body rounded">
+        <div class="p-5">
+          <h4>ABOUT US</h4>
+          <hr size="4px" color="black" width="150px" />
+          <h2 class="pt-4">I'm a title. ​Click here to edit me.</h2>
+          <h3 class="pt-4">
+            I'm a paragraph. Click here to add your own text and edit me. It’s
+            easy. Just click “Edit Text” or double click me to add your own
+            content and make changes to the font. Feel free to drag and drop me
+            anywhere you like on your page. I’m a great place for you to tell a
+            story and let your users know a little more about you
+          </h3>
+        </div>
+      </div>
+
+      <div class="about-cards d-flex w-50 justify-content-center gap-5 p-5">
+        <div class="card" style="background-image: url(./img/made.jpg)">
+          <div class="content">Made</div>
+        </div>
+        <div class="card" style="background-image: url(./img/with.jpg)">
+          <div class="content">With</div>
+        </div>
+        <div class="card" style="background-image: url(./img/love.jpg)">
+          <div class="content">Love</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-cards">
+      <div class="title-cards text-center pt-5 pb-3">SPRING BOUQUETS</div>
+      <hr style="width: 50%; text-align: center; margin-left: 25%" />
+
+      <div></div>
+    </div>
+
+    <footer>
+      <div class="p-5 d-flex">
+        <div>
+          <h3>CONTACT US</h3>
+          <h4>500 Terry Francois Street, San Francisco, CA 123-456-7890</h4>
+        </div>
+        <div>
+          <h3>OPENING HOURS</h3>
+          <h4>
+            Mon - Fri: 7am - 10pm <br />
+            ​​Saturday: 8am - 10pm <br />
+            Sunday: 8am - 11pm
+          </h4>
+        </div>
+        <div>
+          <h3>CONTACT US</h3>
+          <h4>500 Terry Francois Street, San Francisco, CA 123-456-7890</h4>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./practicas.js"></script>
+  </body>
+</html>

@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&display=swap");
+
+body {
+  background-image: url(./img/fondo.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; 
+}
+
+.navbar-brand {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  color: #3b4438 !important;
+  font-size: 15px !important;
+}
+
+.container-main {
+  height: 100vh;
+}
+
+.subtitle {
+  padding-left: 15%;
+  padding-top: 4%;
+  font-size: 30px;
+  color: #3b4438;
+  font-family: "Lobster Two", cursive;
+}
+
+.title {
+  font-size: 120px;
+  color: white;
+  font-weight: bold;
+  font-family: "Raleway", sans-serif;
+  padding-left: 15%;
+  text-shadow: 6px 10px 5px rgba(0, 0, 0, 0.32);
+  letter-spacing: 15px;
+}
+
+.container-main button {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  margin-left: 15%;
+  padding: 1%;
+}
+
+.about {
+  background-color: white;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 5%; 
+}
+
+.about h4 {
+  letter-spacing: 2px;
+  font-size: 15px;
+  font-family: "Raleway", sans-serif;
+}
+
+.about h2 {
+  font-family: "Lobster Two", cursive;
+  color: #3b4438;
+}
+
+.about h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+}
+
+.container-about {
+  height: 100vh;
+}
+
+.container-cards {
+  height: 100vh;
+  background-color: white;
+}
+
+.about-cards {
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 3%;
+  
+  margin-bottom: 5%;
+}
+
+.about-cards .card {
+  width: 15rem;
+  height: 20rem;
+  border-radius: 5px; 
+  border-color: white;
+  background-size: cover;
+  box-shadow: 3px 5px 5px rgba(245, 251, 255, 0.8);
+}
+
+.card .content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f5e8f0;
+  font-family: "Lobster Two", cursive;
+  font-size: 50px;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.card:hover .content{
+  opacity: 1;
+}
+
+.title-cards {
+  
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  letter-spacing: 5px;
+  color: #3b4438;
+
+}
