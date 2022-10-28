@@ -1,78 +1,106 @@
+ //Productos ya declarados
+ const Producto = [
+  { nombre: "Ramo de Rosas", precio: 700 },
+  { nombre: "Ramo de Margaritas", precio: 800 },
+  { nombre: "Ramo de Fresias", precio: 900 },
+  { nombre: "Ramo Mixto", precio: 1200 },
+  { nombre: "Ramo Primaveral", precio: 1500 },
+];
+
+//Clase constructora de nuevo objetos
+class ramo {
+  constructor(nombre, precio) {
+      this.nombre = nombre
+      this.precio = precio
+  }
+}
+
+//Función para interactuar y agregar nuevos Ramos a producto
+function agregarRamo() {
+  let nombreRamo = prompt("Ingrese el nombre del nuevo ramo")
+  let nuevoPrecio = prompt("Ingrese el precio")
+
+  let ramonuevo = new ramo(nombreRamo, nuevoPrecio,)
+
+  Producto.push(ramonuevo)
+  console.log(Producto)
+  return null;
+
+}
+
+//Carrito
+let carrito = [];
+
+//Función para agregar al carrito
+const addCarrito = () => {
+  let nombre = prompt("Ingrese un nombre")
+  let resultado = Producto.find((n) => n.nombre.toLowerCase() === nombre.toLowerCase());
+
+
+  if (resultado) {
+      carrito.push(resultado);
+      console.log(carrito);
+  } else {
+      alert("El ramo no existe");
+  }
+};
+
+//Funcion preciofinal
+function precioFinal() {
+  let totalPrecios = carrito.reduce(((acumulador, carrito) => acumulador + carrito.precio), 0);
+  return totalPrecios;
+}
+
 //Interacción con el usuario
-bienvenida();
-function bienvenida() {
-  let preguntaPrincipal = true;
-  while (preguntaPrincipal) {
-    let pregunta = prompt(`¡Bienvenido a Blooming Bouquet! ¿Deseas comprar nuestros ramos de flores?`).toLowerCase();
-    if (pregunta == "si") {
-      preguntaPrincipal = false;
-      mostrarLista();
-    } else if (pregunta == "no") {
-      preguntaPrincipal = false;
-      alert("¡Gracias por visitarnos ♥ !");
-    } else {
-      alert("Por favor responde con si o no");
-    }
-  }
-}
+let proceso = true;
+do {
+  let intUsuario = prompt("Desea comprar(Si/No) o Agregar un producto a stock(ADD)").toLowerCase()
 
-function mostrarLista() {
-  // precio productos
-  const precioRamo1 = 500;
-  const precioRamo2 = 700;
-  const precioRamo3 = 900;
-  const precioRamo4 = 1300;
-
-  let listaRamos= true;
-  let carrito = 0;
-  let cantidadRamos = "";
-  while (listaRamos) {
-    let lista = parseInt(
-      prompt(`¿Que producto desea comprar?
-        1. Ramo de Rosas $${precioRamo1}
-        2. Ramo de Margaritas $${precioRamo2}
-        3. Ramo Otoñal $${precioRamo3}
-        4. Ramo Mixto $${precioRamo4}
-        0. No deseo comprar otro producto.`)
-    );
-    switch (lista) {
-      case 1:
-        alert("Ramo de Rosas agregado al carrito");
-        cantidadRamos += `Ramo de Rosas
-            `;
-        carrito += precioRamo1;
-        break;
-      case 2:
-        alert("Ramo de Margaritas agregado al carrito");
-        cantidadRamos += `Ramo de Margaritas
-            `;
-        carrito += precioRamo2;
-        break;
-      case 3:
-        alert("Ramo otoñal agregado al carrito");
-        cantidadRamos += `Ramo otoñal
-            `;
-        carrito += precioRamo3;
-        break;
-      case 4:
-        alert("Ramo mixto agregado al carrito");
-        cantidadRamos += `Ramo mixto
-            `;
-        carrito += precioRamo4;
-        break;
-      case 0:
-        listaRamos= false;
-        if (carrito != 0) {
-          alert(`El total de su compra es de $${carrito}, llevando los siguientes ramos:
-                     ${cantidadRamos}  Gracias por su visita!`);
-        } else {
-          alert(`Usted no agregó productos al carrito.`);
-        }
-        break;
-      default:
-        alert(
-          "Respuesta no válida, porfavor escriba correctamente la opción deseada."
-        );
-    }
+  while (intUsuario != "si" && intUsuario != "no" && intUsuario != "add") {
+      alert("Por favor ingrese una opcion")
+      intUsuario = prompt("Desea comprar(Si/No) o Agregar un producto(ADD)")
   }
-}
+  //Si el usuario quiere comprar, agrega al carrito y devuelve precio final
+  if (intUsuario == "si") {
+      let continuar = true;
+      do {
+          alert("Nuestra lista de productos")
+          let todosLosProductos = Producto.map((Producto) => Producto.nombre + " $" + Producto.precio);
+          alert(todosLosProductos.join(" - "));
+          addCarrito()
+          let afirmativo = prompt("Desea continuar?(Si/No)").toUpperCase()
+          if (afirmativo == "NO") {
+              continuar = false;
+
+          }
+      } while (continuar == true)
+      alert("El precio final es: $" + precioFinal())
+  }
+
+  else if (intUsuario == "add") {
+      let continuar = true;
+
+      //Agrega nuevos ramos a productos
+      do {
+          agregarRamo();
+          alert("Ramo agregado")
+          let afirmativo = prompt("Desea agregar otro ramo?(Si/No)").toUpperCase();
+          if (afirmativo == "NO") {
+              continuar = false;
+
+          }
+      } while (continuar == true)
+      alert("Ramo/s agregados");
+      let seguir = prompt("Desea continuar en la pagina?(Si/No)").toUpperCase
+      if (seguir == "NO") {
+          proceso = false;
+      }
+  }
+  else if (intUsuario == "no") {
+      proceso = false;
+  }
+
+
+} while (proceso == true);
+
+alert("Gracias por visitarnos!")
