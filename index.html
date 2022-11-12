@@ -19,7 +19,7 @@
 
   <body>
     <div>
-      <nav class="navbar bg-transparent fixed-top">
+      <nav class="navbar bg-light fixed-top">
         <div class="container-fluid">
           <a class="navbar-brand" href="#"
             ><img
@@ -65,13 +65,13 @@
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">About</a>
+                  <a class="nav-link" href="#about">About</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Store</a>
+                  <a class="nav-link" href="#store">Store</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Contact</a>
+                  <a class="nav-link" href="#contact">Contact</a>
                 </li>
               </ul>
               <form class="d-flex" role="search">
@@ -100,11 +100,16 @@
         SPRING <br />IS<br />
         HERE
       </div>
-
-      <button type="button" class="btn btn-light">♥ SHOP NOW ♥</button>
+      <div class="button">
+        <a
+        href="#store"
+        class="btn btn-light"
+        >♥ SHOP NOW ♥</a
+      > </div>
+      
     </div>
 
-    <div class="container-about">
+    <div class="container-about" id="about">
       <div class="about w-50 shadow p-3 mb-5 bg-body rounded">
         <div class="p-5">
           <h4>ABOUT US</h4>
@@ -133,15 +138,29 @@
       </div>
     </div>
 
-    <div class="container-cards">
-      <div class="title-cards text-center pt-5 pb-3">SPRING BOUQUETS</div>
-      <hr style="width: 50%; text-align: center; margin-left: 25%" />
-
-      <div></div>
+    <div class="container-cards p-5" id="store">
+      <div class="container">
+        <div class="row">
+            <!-- Elementos generados a partir del JSON -->
+            <main id="items" class="col-sm-8 row gap-5"></main>
+            <!-- Carrito -->
+            <aside class="col-sm-4">
+                <h2>Carrito</h2>
+                <!-- Elementos del carrito -->
+                <ul id="carrito" class="list-group"></ul>
+                <hr>
+                <!-- Precio total -->
+                <p class="text-right">Total: $ <span id="total"></span></p>
+                <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+            </aside>
+        </div>
+      </div>
     </div>
 
+    
+
     <footer>
-      <div class="p-5 d-flex">
+      <div class="p-5 d-flex" id="contact">
         <div>
           <h3>CONTACT US</h3>
           <h4>500 Terry Francois Street, San Francisco, CA 123-456-7890</h4>
@@ -170,3 +189,4 @@
     <script src="./practicas.js"></script>
   </body>
 </html>
+
