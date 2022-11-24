@@ -2,39 +2,46 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&display=swap");
 
 body {
-  
   background-image: url(./img/fondo.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover; 
+  background-size: cover;
 }
 
 nav {
   transition: 0.3s;
 }
 
+.navbar-toggler {
+  background-color: white;
+  padding: 6px;
+  border-radius: 15px;
+
+  color: #cc97b3;
+}
+
+.navbar-toggler-icon {
+  width: 1.2em;
+  height: 1.2em;
+  color: #d18e98;
+}
+
 .navbar-brand {
   font-family: "Raleway", sans-serif;
   font-weight: bold;
-  color: #3b4438 !important;
+  color: #d18e98 !important;
   font-size: 15px !important;
 }
+
+/* Mast container */
 
 .container-main {
   height: 100vh;
 }
 
-.subtitle {
-  padding-left: 15%;
-  padding-top: 4%;
-  font-size: 30px;
-  color: #3b4438;
-  font-family: "Lobster Two", cursive;
-}
-
 .title {
   font-size: 120px;
-  color: white;
+  color: #d13f5f;
   font-weight: bold;
   font-family: "Raleway", sans-serif;
   padding-left: 15%;
@@ -42,18 +49,30 @@ nav {
   letter-spacing: 15px;
 }
 
-.container-main .button {
-  font-family: "Raleway", sans-serif;
-  font-weight: bold;
-  margin-left: 15%;
-  padding: 1%;
+.subtitle {
+  padding-left: 15%;
+  padding-top: 4%;
+  font-size: 30px;
+  color: #746c6c;
+  font-family: "Lobster Two", cursive;
+}
+
+/* section about */
+
+.container-about {
+  height: 100vh;
+}
+
+.cont-about {
+  padding: 8%;
 }
 
 .about {
   background-color: white;
   margin-left: 25%;
   margin-right: 25%;
-  margin-top: 5%; 
+  margin-top: 5%;
+  width: 50%;
 }
 
 .about h4 {
@@ -64,7 +83,7 @@ nav {
 
 .about h2 {
   font-family: "Lobster Two", cursive;
-  color: #3b4438;
+  color: #746c6c;
 }
 
 .about h3 {
@@ -72,33 +91,23 @@ nav {
   font-size: 20px;
 }
 
-.container-about {
-  height: 100vh;
-}
-
-.container-cards {
-  height: auto;
-  background-color: white;
-}
-
 .about-cards {
   margin-left: 25%;
   margin-right: 25%;
-  margin-top: 3%;
-  
+  margin-top: 3%; 
   margin-bottom: 5%;
 }
 
 .about-cards .card {
   width: 15rem;
   height: 20rem;
-  border-radius: 5px; 
+  border-radius: 5px;
   border-color: white;
   background-size: cover;
   box-shadow: 3px 5px 5px rgba(245, 251, 255, 0.8);
 }
 
-.card .content {
+.about-cards .card .content {
   width: 100%;
   height: 100%;
   display: flex;
@@ -112,17 +121,346 @@ nav {
   transition: 0.5s;
 }
 
-.card:hover .content{
+.about-cards .card:hover .content {
   opacity: 1;
 }
 
-.title-cards {
-  
-  font-family: "Raleway", sans-serif;
-  font-weight: bold;
-  letter-spacing: 5px;
-  color: #3b4438;
+/* section slide */
 
+.swiper {
+  width: 100%;
+  height: 100%;
 }
 
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #f8f9fa;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.titleproductos {
+  font-family: "Lobster Two", cursive;
+  font-size: 30px;
+  color: #d13f5f;
+}
+
+.indexcard-title {
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+}
+
+:root {
+  --swiper-theme-color: #d13f5f !important;
+}
+
+/* WorkShop */
+
+.workshop p {
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+}
+
+.workshop-bg {
+  background-image: url(/img/workshop.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 350px;
+}
+.workshop-text h3 {
+  font-family: "Lobster Two", cursive;
+  font-size: 25px;
+}
+
+.workshop-text h4 {
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+}
+
+.workshop-border {
+  border-style: solid;
+  border-color: #f6d0db;
+}
+
+/* section carrito */
+
+.carrito {
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  width: 40px;
+  height: 40px;
+  margin: 0 15px 0 auto;
+}
+
+#carritoDetails h2 {
+  font-size: 20px;
+  text-align: center;
+}
+
+#carritoDetails {
+  width: 500px;
+  position: fixed;
+  top: 60px;
+  right: 0px;
+  z-index: 9999;
+}
+
+#carritoDetails .card-body {
+  padding: 25px;
+}
+
+.containercarrito {
+  margin-top: 5%;
+}
+
+.titulocarrito {
+  font-family: "Lobster Two", cursive;
+  font-size: 30px;
+  color: #d18e98;
+}
+
+.container-cards {
+  height: auto;
+  background-color: white;
+}
+
+#items .btn {
+  margin: 0 auto;
+}
+
+.card-body {
+  padding: 0;
+}
+
+#store .img-fluid {
+  width: auto;
+  height: 80%;
+}
+
+.card-title {
+  justify-content: center;
+  display: flex;
+  padding-top: 5%;
+  font-size: 15px;
+  font-family: "Raleway", sans-serif;
+}
+.card-text {
+  justify-content: center;
+  display: flex;
+  padding-top: 5%;
+}
+
+#store .card {
+  background-color: transparent;
+  border: none;
+}
+
+.card-body {
+  margin-bottom: 50px;
+}
+
+/* footer */
+
+footer {
+  font-size: 15px;
+  font-family: "Raleway", sans-serif;
+}
+
+footer h4 {
+  color: #d13f5f;
+}
+
+#contact {
+  background-color: white;
+}
+
+/* Buttons */
+
+.btn-outline:hover,
+.btn-outline:active,
+.btn-outline:focus,
+.btn-outline.active {
+  background: #d18e98;
+  color: #ffffff;
+  border-color: #d18e98;
+}
+
+.container-main .button {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  margin-left: 15%;
+  padding: 1%;
+}
+
+.btn-outline {
+  color: #d18e98;
+  border-color: #d18e98;
+  font-weight: bold;
+  border-radius: 0;
+}
+#boton-vaciar {
+  width: 25%;
+  align-self: center;
+}
+
+.swal2-styled.swal2-confirm {
+  background-color: #cc97b3;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 576px) {
+  body {
+    background-position: center;
+  }
+
+  nav {
+    background: #fff;
+  }
+
+  .container-main {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  .subtitle {
+    font-size: 20px;
+    padding-top: 30%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 15%;
+    padding-left: 0;
+  }
+
+  .linea {
+    display: none;
+  }
+
+  .container-main .button {
+    margin: 0;
+    padding: 0;
+    display: block;
+    text-align: center;
+  }
+
+  .title {
+    display: block;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 15%;
+    font-size: 80px;
+    letter-spacing: 0px;
+    text-align: center;
+  }
+
+  .container-about {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+  }
+  .about {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 0;
+  }
+  .cont-about {
+    padding: 1%;
+    margin: 0;
+  }
+  .cont-about h4 {
+    font-size: 0.7em;
+  }
+  .cont-about h2 {
+    font-size: 1.5em;
+  }
+  .cont-about h3 {
+    font-size: 1em;
+  }
+
+  .about-cards {
+    display: none !important;
+  }
+
+  /* WorkShop */
+  .workshop-border {
+    display: flex;
+    flex-direction: column;
+    width: 100% !important;
+  }
+
+  .workshop-text {
+    width: 100% !important;
+    padding: 2%;
+  }
+
+  .workshop-bg {
+    width: 100% !important;
+  }
+  .containercarrito {
+    margin-top: 20%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .container-cards {
+    width: 100% !important;
+  }
+
+  #items {
+    padding: 0;
+    gap: 0;
+  }
  
+
+  #carritoDetails {
+    width: 420px;
+    position: fixed;
+    top: 60px;
+    right: 0px;
+    z-index: 9999;
+  }
+
+  /* Footer */
+
+  footer {
+    font-size: 15px;
+    font-family: "Raleway", sans-serif;
+  }
+
+  footer h4 {
+    color: #d13f5f;
+    font-size: 25px;
+  }
+
+  #contact {
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+  }
+}
