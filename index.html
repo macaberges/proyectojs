@@ -36,7 +36,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="./style.css" />
     <script src="./practicas.js"></script>
-    
   </head>
 
   <body>
@@ -102,7 +101,7 @@
                   <a class="nav-link" href="#about">About</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="./carrito.html">Store</a>
+                  <a class="nav-link" href="./productos.html">Store</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#contact">Contact</a>
@@ -122,10 +121,10 @@
             </div>
           </div>
         </div>
-      </nav> 
+      </nav>
 
-      <div class="collapse " id="carritoDetails">
-        <div class="card card-body" >
+      <div class="collapse" id="carritoDetails">
+        <div class="card card-body">
           <h2>Carrito</h2>
           <ul id="carrito" class="list-group" style="border: none"></ul>
           <p class="align-text-center text-center pt-2">
@@ -149,9 +148,8 @@
       </div>
     </div>
 
-
     <!-- MAIN CONTAINER -->
-    <div class="container-main p-5">
+    <div class="main-container p-5">
       <div class="subtitle">
         Step into spring with a colorful bouquet
         <hr class="linea" size="4px" color="black" width="150px" />
@@ -161,15 +159,14 @@
         HERE
       </div>
       <div class="button pt-5">
-        <a href="/carrito.html" class="btn btn-outline">♥ SHOP NOW ♥</a>
+        <a href="/productos.html" class="btn btn-outline">♥ SHOP NOW ♥</a>
       </div>
     </div>
 
-
     <!-- ABOUT CONTAINER -->
-    <div class="container-about" id="about">
+    <div class="about-section" id="about">
       <div class="about shadow p-3 mb-5 bg-body rounded row">
-        <div class="cont-about">
+        <div class="about-div">
           <h4>ABOUT US</h4>
           <hr size="4px" color="black" width="150px" />
           <h2 class="pt-4">I'm a title. ​Click here to edit me.</h2>
@@ -196,60 +193,62 @@
       </div>
     </div>
 
-
     <!-- SWIPER CARRITO -->
     <div class="products w-100 bg-light p-5">
       <div class="titleproductos text-center pt-2">Spring Bouquets</div>
-      
-      <hr class=" mx-auto" width="100px;"   />
+
+      <hr class="mx-auto" width="100px;" />
       <!-- Swiper -->
       <div class="swiper mySwiper p-5">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="indexcard">
-              <img class="p-3" src="/img/ramo1.jfif" />
-              <h4 class="indexcard-title pt-1 pb-2">Ramo Estambul</h4>
+              <div class="imgslide">
+                <img class="" src="/img/ramo1.jfif" />
+                <p> Add to Cart </p> 
+              </div>
+              <h4 class="indexcard-title pt-5 ">Ramo Estambul</h4>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="indexcard">
-              <img class="p-3" src="/img/ramo2.jfif" />
-              <h4 class="indexcard-title pt-1 pb-2">Ramo Kyoto</h4>
+              <img class="" src="/img/ramo2.jfif" />
+              <h4 class="indexcard-title   pb-2">Ramo Kyoto</h4>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="indexcard">
-              <img class="p-3" src="/img/ramo3.jfif" />
+              <img class="" src="/img/ramo3.jfif" />
               <h4 class="indexcard-title pt-1 pb-2">Ramo Bangkok</h4>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="indexcard">
-              <img class="p-3" src="/img/ramo4.jfif" />
+              <img class="" src="/img/ramo4.jfif" />
               <h4 class="indexcard-title pt-1 pb-2">Ramo Praga</h4>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="indexcard">
-              <img class="p-3" src="/img/ramo5.jfif" />
+              <img class="" src="/img/ramo5.jfif" />
               <h4 class="indexcard-title pt-1 pb-2">Ramo Venecia</h4>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="indexcard">
-              <img class="p-3" src="/img/ramo6.jfif" />
+              <img class="" src="/img/ramo6.jfif" />
               <h4 class="indexcard-title pt-1 pb-2">Ramo Beirut</h4>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="indexcard">
-              <img class="p-3" src="/img/ramo7.jfif" />
+              <img class="" src="/img/ramo7.jfif" />
               <h4 class="indexcard-title pt-1 pb-2">Ramo Bergen</h4>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="indexcard">
-              <img class="p-3" src="/img/ramo8.jfif" />
+              <img class="" src="/img/ramo8.jfif" />
               <h4 class="indexcard-title pt-1 pb-2">Ramo Buenos Aires</h4>
             </div>
           </div>
@@ -259,32 +258,30 @@
         <div class="swiper-pagination"></div>
       </div>
       <div class="d-flex justify-content-center pt-5">
-        <a href="/carrito.html" class="btn btn-outline">VIEW ALL</a>
+        <a href="./productos.html" class="btn btn-outline">VIEW ALL</a>
       </div>
     </div>
-
 
     <!-- WORKSHOP -->
     <div class="workshop text-center p-5 bg-light">
       <p>OUR WORKSHOPS</p>
-      <hr class=" pb-5 mx-auto "width="70px;"   />
+      <hr class="pb-5 mx-auto" width="70px;" />
 
       <div class="d-flex justify-content-between mx-auto w-50 workshop-border">
         <div class="workshop-text w-50 text-center bg-light pt-5">
-          <h3 class="pt-2" >Flower Arrangment Workshop</h3>
+          <h3 class="pt-2">Flower Arrangment Workshop</h3>
           <h4 class="p-5">
             I'm a tagline. Click here to add your own text and edit me.
           </h4>
 
-          <a href="#" class="btn btn-outline ">BOOK IT</a>
+          <a href="#" class="btn btn-outline">BOOK IT</a>
         </div>
         <div class="workshop-bg w-50"></div>
       </div>
     </div>
 
-
     <!-- FOOTER -->
-    <footer >
+    <footer>
       <div
         class="container-fluid d-flex justify-content-center align-items-center"
       >
@@ -331,6 +328,7 @@
       </div>
     </footer>
 
+    <!-- SWIPER SCRIPT-->
     <script>
       var swiper = new Swiper(".mySwiper", {
         slidesPerView: 4,

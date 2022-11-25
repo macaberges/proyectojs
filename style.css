@@ -8,6 +8,8 @@ body {
   background-size: cover;
 }
 
+/* Navbar */
+
 nav {
   transition: 0.3s;
 }
@@ -33,9 +35,9 @@ nav {
   font-size: 15px !important;
 }
 
-/* Mast container */
+/* Main Container */
 
-.container-main {
+.main-container {
   height: 100vh;
 }
 
@@ -57,13 +59,13 @@ nav {
   font-family: "Lobster Two", cursive;
 }
 
-/* section about */
+/* About Container */
 
-.container-about {
+.about-section {
   height: 100vh;
 }
 
-.cont-about {
+.about-div {
   padding: 8%;
 }
 
@@ -125,7 +127,7 @@ nav {
   opacity: 1;
 }
 
-/* section slide */
+/* Swiper */
 
 .swiper {
   width: 100%;
@@ -136,8 +138,6 @@ nav {
   text-align: center;
   font-size: 18px;
   background: #f8f9fa;
-
-  /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -174,6 +174,18 @@ nav {
   --swiper-theme-color: #d13f5f !important;
 }
 
+.imgslide p{
+  position: absolute;
+  padding: 4%; 
+    bottom: 4%;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    background-color: white;
+}
+
+
+
 /* WorkShop */
 
 .workshop p {
@@ -202,7 +214,7 @@ nav {
   border-color: #f6d0db;
 }
 
-/* section carrito */
+/* Productos */
 
 .carrito {
   border-radius: 50%;
@@ -279,7 +291,7 @@ nav {
   margin-bottom: 50px;
 }
 
-/* footer */
+/* Footer */
 
 footer {
   font-size: 15px;
@@ -305,7 +317,7 @@ footer h4 {
   border-color: #d18e98;
 }
 
-.container-main .button {
+.main-container .button {
   font-family: "Raleway", sans-serif;
   font-weight: bold;
   margin-left: 15%;
@@ -327,7 +339,9 @@ footer h4 {
   background-color: #cc97b3;
 }
 
-/* Media Queries */
+
+
+/* ----Media Queries------ */
 
 @media screen and (max-width: 576px) {
   body {
@@ -338,7 +352,7 @@ footer h4 {
     background: #fff;
   }
 
-  .container-main {
+  .main-container {
     display: block;
     margin: 0;
     padding: 0;
@@ -358,7 +372,7 @@ footer h4 {
     display: none;
   }
 
-  .container-main .button {
+  .main-container .button {
     margin: 0;
     padding: 0;
     display: block;
@@ -376,7 +390,7 @@ footer h4 {
     text-align: center;
   }
 
-  .container-about {
+  .about-section {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -389,17 +403,17 @@ footer h4 {
     margin: 0 auto;
     padding-top: 0;
   }
-  .cont-about {
+  .about-div {
     padding: 1%;
     margin: 0;
   }
-  .cont-about h4 {
+  .about-div h4 {
     font-size: 0.7em;
   }
-  .cont-about h2 {
+  .about-div h2 {
     font-size: 1.5em;
   }
-  .cont-about h3 {
+  .about-div h3 {
     font-size: 1em;
   }
 
