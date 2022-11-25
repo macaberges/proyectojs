@@ -1,13 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
   async function getProducts() {
-    let res = await fetch("https://dummyjson.com/products");
-    let productos = await res.json();
-    return productos["products"].slice(0, 9);
+    return await fetch("scripts/database.js").then(res => res.json());
   }
 
   // Variables
-
-  let baseDeDatos = [];
   let carrito = [];
   const divisa = "$";
   const DOMitems = document.getElementById("items");
@@ -21,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function renderizarProductos(productos) {
     if (DOMitems != null) {
-      productos.forEach((info) => {
+      productos.forEach(prod => {
         // Estructura
         const card = document.createElement("div");
         card.classList.add("card", "col-sm-6", "col-md-4", "col-lg-3");
@@ -31,20 +27,20 @@ document.addEventListener("DOMContentLoaded", () => {
         // Titulo
         const cardTitle = document.createElement("h5");
         cardTitle.classList.add("card-title");
-        cardTitle.textContent = info.title;
+        cardTitle.textContent = prod.title;
         // Imagen
         const cardImage = document.createElement("img");
         cardImage.classList.add("img-fluid");
-        cardImage.setAttribute("src", info.thumbnail);
+        cardImage.setAttribute("src", prod.image);
         // Precio
         const cardPrice = document.createElement("p");
         cardPrice.classList.add("card-text");
-        cardPrice.textContent = `${divisa}${info.price}`;
+        cardPrice.textContent = `${divisa}${prod.price}`;
         // Botón
         const cardButton = document.createElement("button");
         cardButton.classList.add("btn", "btn-outline", "d-flex");
         cardButton.textContent = "Agregar al carrito";
-        cardButton.setAttribute("marcador", info.id);
+        cardButton.setAttribute("marcador", prod.id);
         cardButton.addEventListener("click", addProduct);
 
         cardBody.appendChild(cardImage);

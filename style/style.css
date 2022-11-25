@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&display=swap");
 
 body {
-  background-image: url(./img/fondo.jpg);
+  background-image: url('/img/fondo.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -194,7 +194,7 @@ nav {
 }
 
 .workshop-bg {
-  background-image: url(/img/workshop.jpg);
+  background-image: url('/img/workshop.jpg');
   background-position: center;
   background-size: cover;
   height: 350px;
