@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&display=swap");
 
 body {
-  background-image: url('/img/fondo.jpg');
+  background-image: url("/img/fondo.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -18,8 +18,8 @@ nav {
   background-color: white;
   padding: 6px;
   border-radius: 15px;
-
   color: #cc97b3;
+  margin-right: 15px;
 }
 
 .navbar-toggler-icon {
@@ -32,72 +32,84 @@ nav {
   font-family: "Raleway", sans-serif;
   font-weight: bold;
   color: #d18e98 !important;
-  font-size: 15px !important;
+  font-size: 1rem !important;
 }
 
 /* Main Container */
 
 .main-container {
   height: 100vh;
+  padding-left: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .title {
-  font-size: 120px;
+  font-size: 13vh;
   color: #d13f5f;
   font-weight: bold;
   font-family: "Raleway", sans-serif;
-  padding-left: 15%;
   text-shadow: 6px 10px 5px rgba(0, 0, 0, 0.32);
   letter-spacing: 15px;
 }
 
 .subtitle {
-  padding-left: 15%;
   padding-top: 4%;
   font-size: 30px;
   color: #746c6c;
   font-family: "Lobster Two", cursive;
 }
 
+.main-container .button {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  padding: 1%;
+}
+
 /* About Container */
 
 .about-section {
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
 }
 
-.about-div {
-  padding: 8%;
-}
-
-.about {
+.about-text {
   background-color: white;
-  margin-left: 25%;
-  margin-right: 25%;
-  margin-top: 5%;
-  width: 50%;
-}
+  width: 50vw;
+  margin: 0 auto;
+  padding: 2%;
+} 
 
-.about h4 {
+.about-text h4 {
   letter-spacing: 2px;
   font-size: 15px;
-  font-family: "Raleway", sans-serif;
+  font-family: "Raleway", sans-serif; 
 }
 
-.about h2 {
+.about-text h2 {
   font-family: "Lobster Two", cursive;
   color: #746c6c;
+  padding: 2%;
 }
 
-.about h3 {
+.about-text h3 {
   font-family: "Raleway", sans-serif;
-  font-size: 20px;
+  font-size: 15px;
+  padding: 2%;
 }
 
 .about-cards {
-  margin-left: 25%;
-  margin-right: 25%;
-  margin-top: 3%; 
-  margin-bottom: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3%;
+  padding: 3%;
+  width: 50vw;
 }
 
 .about-cards .card {
@@ -130,8 +142,9 @@ nav {
 /* Swiper */
 
 .swiper {
-  width: 100%;
+  width: 80%;
   height: 100%;
+  user-select: none;
 }
 
 .swiper-slide {
@@ -174,18 +187,6 @@ nav {
   --swiper-theme-color: #d13f5f !important;
 }
 
-.imgslide p{
-  position: absolute;
-  padding: 4%; 
-    bottom: 4%;
-    width: 100%;
-    text-align: center;
-    font-size: 18px;
-    background-color: white;
-}
-
-
-
 /* WorkShop */
 
 .workshop p {
@@ -194,34 +195,47 @@ nav {
 }
 
 .workshop-bg {
-  background-image: url('/img/workshop.jpg');
+  background-image: url("/img/workshop.jpg");
   background-position: center;
   background-size: cover;
   height: 350px;
+  width: 50%;
 }
 .workshop-text h3 {
   font-family: "Lobster Two", cursive;
   font-size: 25px;
+  padding-top: 2%;
 }
 
 .workshop-text h4 {
   font-family: "Raleway", sans-serif;
   font-size: 15px;
+  padding: 5%;
 }
 
 .workshop-border {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 50%;
   border-style: solid;
   border-color: #f6d0db;
+}
+.workshop-text {
+  width: 50%;
+  text-align: center;
+  padding-top: 5%;
 }
 
 /* Productos */
 
 .carrito {
-  border-radius: 50%;
-  border: 1px solid #ccc;
-  width: 40px;
-  height: 40px;
+  border-radius: 15px;
+  border: 1px solid #0000001a;
+  width: 38px;
+  height: 38px;
   margin: 0 15px 0 auto;
+  background-color: white;
 }
 
 #carritoDetails h2 {
@@ -263,7 +277,9 @@ nav {
 .card-body {
   padding: 0;
 }
-
+#store {
+  width: 75%;
+}
 #store .img-fluid {
   width: auto;
   height: 80%;
@@ -293,9 +309,11 @@ nav {
 
 /* Footer */
 
-footer {
+.footer {
   font-size: 15px;
   font-family: "Raleway", sans-serif;
+  display: flex;
+  justify-content: center;
 }
 
 footer h4 {
@@ -304,6 +322,19 @@ footer h4 {
 
 #contact {
   background-color: white;
+  width: 50%;
+  padding: 5%;
+  gap: 5%;
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.autor {
+  font-family: "Raleway", sans-serif;
+  font-size: 13px;
+  width: 20%;
 }
 
 /* Buttons */
@@ -315,13 +346,6 @@ footer h4 {
   background: #d18e98;
   color: #ffffff;
   border-color: #d18e98;
-}
-
-.main-container .button {
-  font-family: "Raleway", sans-serif;
-  font-weight: bold;
-  margin-left: 15%;
-  padding: 1%;
 }
 
 .btn-outline {
@@ -339,11 +363,9 @@ footer h4 {
   background-color: #cc97b3;
 }
 
-
-
 /* ----Media Queries------ */
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 1200px) {
   body {
     background-position: center;
   }
@@ -353,105 +375,90 @@ footer h4 {
   }
 
   .main-container {
-    display: block;
+    align-items: center;
     margin: 0;
     padding: 0;
   }
 
-  .subtitle {
-    font-size: 20px;
-    padding-top: 30%;
-    display: block;
-    margin: 0 auto;
+  .title {
     text-align: center;
-    padding-bottom: 15%;
-    padding-left: 0;
+    font-size: 15vw;
+  }
+
+  .subtitle {
+    font-size: 5vw;
+    padding-bottom: 5%;
+  }
+
+  .main-container .button {
+    padding-top: 10%;
   }
 
   .linea {
     display: none;
   }
 
-  .main-container .button {
-    margin: 0;
-    padding: 0;
-    display: block;
-    text-align: center;
-  }
-
-  .title {
-    display: block;
-    margin: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 15%;
-    font-size: 80px;
-    letter-spacing: 0px;
-    text-align: center;
-  }
-
   .about-section {
     width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0;
+    padding-bottom: 30%;
   }
-  .about {
-    display: block;
-    width: 80%;
+  .about-text {
     margin: 0 auto;
-    padding-top: 0;
+    padding: 5%;
+    width: 80%;
   }
-  .about-div {
-    padding: 1%;
-    margin: 0;
-  }
-  .about-div h4 {
+  .about-text h4 {
     font-size: 0.7em;
   }
-  .about-div h2 {
+  .about-text h2 {
     font-size: 1.5em;
   }
-  .about-div h3 {
+  .about-text h3 {
     font-size: 1em;
   }
 
   .about-cards {
-    display: none !important;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    padding-top: 10%;
   }
 
   /* WorkShop */
   .workshop-border {
     display: flex;
     flex-direction: column;
-    width: 100% !important;
+    width: 100%;
   }
 
   .workshop-text {
-    width: 100% !important;
+    width: 100%;
     padding: 2%;
   }
 
   .workshop-bg {
-    width: 100% !important;
+    width: 100%;
   }
   .containercarrito {
     margin-top: 20%;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .container-cards {
-    width: 100% !important;
+    width: 100%;
   }
 
   #items {
     padding: 0;
     gap: 0;
   }
- 
 
+  
+#store {
+  width: 100%;
+} 
   #carritoDetails {
     width: 420px;
     position: fixed;
@@ -473,8 +480,15 @@ footer h4 {
   }
 
   #contact {
-    width: 100% !important;
+    width: 70%;
     display: flex;
     flex-direction: column;
+    align-items: stretch;
   }
+  
+.autor { 
+  font-size: 13px;
+  width: 50%;
+}
+
 }

@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap demo</title>
+    <title>Blooming Bouquet </title>
+    <link rel="shortcut icon" href="img/icons8-flower-32.png">
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -28,6 +29,7 @@
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/toastify-js"
     ></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
@@ -35,9 +37,8 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="style/style.css" />
-    <script src="scripts/practicas.js"></script>
+    <script src="scripts/codigo.js"></script>
   </head>
-
   <body>
     <!-- NAVBAR  -->
     <div>
@@ -125,7 +126,7 @@
 
       <div class="collapse" id="carritoDetails">
         <div class="card card-body">
-          <h2>Carrito</h2>
+          <h2>Cart</h2>
           <ul id="carrito" class="list-group" style="border: none"></ul>
           <p class="align-text-center text-center pt-2">
             Total: $ <span id="total"></span>
@@ -135,13 +136,13 @@
               type="button"
               id="boton-finalizar"
               class="btn btn-outline-success w-50"
-              value="Finalizar compra"
+              value="Purchase"
             />
             <input
               type="button"
               id="boton-vaciar"
               class="btn btn-outline-danger"
-              value="Vaciar"
+              value="Clear"
             />
           </div>
         </div>
@@ -149,7 +150,7 @@
     </div>
 
     <!-- MAIN CONTAINER -->
-    <div class="main-container p-5">
+    <section class="main-container container-fluid">
       <div class="subtitle">
         Step into spring with a colorful bouquet
         <hr class="linea" size="4px" color="black" width="150px" />
@@ -158,29 +159,27 @@
         SPRING <br />IS<br />
         HERE
       </div>
-      <div class="button pt-5">
+      <div class="button">
         <a href="productos.html" class="btn btn-outline">♥ SHOP NOW ♥</a>
       </div>
-    </div>
+    </section>
 
     <!-- ABOUT CONTAINER -->
-    <div class="about-section" id="about">
-      <div class="about shadow p-3 mb-5 bg-body rounded row">
-        <div class="about-div">
-          <h4>ABOUT US</h4>
-          <hr size="4px" color="black" width="150px" />
-          <h2 class="pt-4">I'm a title. ​Click here to edit me.</h2>
-          <h3 class="pt-4">
-            I'm a paragraph. Click here to add your own text and edit me. It’s
-            easy. Just click “Edit Text” or double click me to add your own
-            content and make changes to the font. Feel free to drag and drop me
-            anywhere you like on your page. I’m a great place for you to tell a
-            story and let your users know a little more about you
-          </h3>
-        </div>
+    <section class="about-section" id="about">
+      <div class="about-text shadow bg-body rounded">
+        <h4>ABOUT US</h4>
+        <hr size="4px" color="black" width="150px" />
+        <h2 class="">I'm a title. ​Click here to edit me.</h2>
+        <h3 class="">
+          I'm a paragraph. Click here to add your own text and edit me. It’s
+          easy. Just click “Edit Text” or double click me to add your own
+          content and make changes to the font. Feel free to drag and drop me
+          anywhere you like on your page. I’m a great place for you to tell a
+          story and let your users know a little more about you
+        </h3>
       </div>
 
-      <div class="about-cards d-flex w-50 justify-content-center gap-5 p-5 row">
+      <div class="about-cards">
         <div class="card" style="background-image: url(/img/made.jpg)">
           <div class="content">Made</div>
         </div>
@@ -191,73 +190,19 @@
           <div class="content">Love</div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- SWIPER CARRITO -->
     <div class="products w-100 bg-light p-5">
       <div class="titleproductos text-center pt-2">Spring Bouquets</div>
-
       <hr class="mx-auto" width="100px;" />
       <!-- Swiper -->
-      <div class="swiper mySwiper p-5">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="indexcard">
-              <div class="imgslide">
-                <img class="" src="/img/ramo1.jfif" />
-                <p> Add to Cart </p> 
-              </div>
-              <h4 class="indexcard-title pt-5 ">Ramo Estambul</h4>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="indexcard">
-              <img class="" src="/img/ramo2.jfif" />
-              <h4 class="indexcard-title   pb-2">Ramo Kyoto</h4>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="indexcard">
-              <img class="" src="/img/ramo3.jfif" />
-              <h4 class="indexcard-title pt-1 pb-2">Ramo Bangkok</h4>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="indexcard">
-              <img class="" src="/img/ramo4.jfif" />
-              <h4 class="indexcard-title pt-1 pb-2">Ramo Praga</h4>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="indexcard">
-              <img class="" src="/img/ramo5.jfif" />
-              <h4 class="indexcard-title pt-1 pb-2">Ramo Venecia</h4>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="indexcard">
-              <img class="" src="/img/ramo6.jfif" />
-              <h4 class="indexcard-title pt-1 pb-2">Ramo Beirut</h4>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="indexcard">
-              <img class="" src="/img/ramo7.jfif" />
-              <h4 class="indexcard-title pt-1 pb-2">Ramo Bergen</h4>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="indexcard">
-              <img class="" src="/img/ramo8.jfif" />
-              <h4 class="indexcard-title pt-1 pb-2">Ramo Buenos Aires</h4>
-            </div>
-          </div>
-        </div>
+      <div id="swiper" class="swiper mySwiper p-5">
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
         <div class="swiper-pagination"></div>
       </div>
-      <div class="d-flex justify-content-center pt-5">
+      <div class="d-flex justify-content-center ">
         <a href="productos.html" class="btn btn-outline">VIEW ALL</a>
       </div>
     </div>
@@ -267,31 +212,24 @@
       <p>OUR WORKSHOPS</p>
       <hr class="pb-5 mx-auto" width="70px;" />
 
-      <div class="d-flex justify-content-between mx-auto w-50 workshop-border">
-        <div class="workshop-text w-50 text-center bg-light pt-5">
-          <h3 class="pt-2">Flower Arrangment Workshop</h3>
-          <h4 class="p-5">
-            I'm a tagline. Click here to add your own text and edit me.
-          </h4>
+      <div class="workshop-border">
+        <div class="workshop-text">
+          <h3>Flower Arrangment Workshop</h3>
+          <h4>I'm a tagline. Click here to add your own text and edit me.</h4>
 
           <a href="#" class="btn btn-outline">BOOK IT</a>
         </div>
-        <div class="workshop-bg w-50"></div>
+        <div class="workshop-bg"></div>
       </div>
     </div>
 
     <!-- FOOTER -->
     <footer>
-      <div
-        class="container-fluid d-flex justify-content-center"
-      >
-        <div
-          class="w-50 p-5 gap-5 d-flex justify-content-center mt-5 mb-5"
-          id="contact"
-        >
+      <div class="footer">
+        <div id="contact">
           <div>
             <h4>CONTACT US</h4>
-            <hr class="w-25" />
+            <hr width="25%" />
             <p>
               500 Terry Francois Street,<br />
               San Francisco, CA <br />
@@ -300,7 +238,7 @@
           </div>
           <div>
             <h4>OPENING HOURS</h4>
-            <hr class="w-25" />
+            <hr width="25%" />
             <p>
               Mon - Fri: 7am - 10pm <br />
               ​​Saturday: 8am - 10pm <br />
@@ -309,14 +247,14 @@
           </div>
           <div>
             <h4>STAY UPDATED</h4>
-            <hr class="w-25" />
+            <hr width="25%" />
             <p>Sign up for our newsletter</p>
             <form>
-              <div class="row mb-3">
+              <div class="mb-3">
                 <label for="inputEmail3" class="col-sm-2 col-form-label"
                   >Email</label
                 >
-                <div class="d-flex col-sm-10">
+                <div class="d-flex">
                   <input type="email" class="form-control" id="inputEmail3" />
 
                   <button type="submit" class="btn btn-outline">Join</button>
@@ -326,43 +264,9 @@
           </div>
         </div>
       </div>
+      <div>
+        <p class="autor  mx-auto bg-light text-center rounded"> 🌸Made with love by © Macarena Berges 🌸</p>
+      </div>
     </footer>
-
-    <!-- SWIPER SCRIPT-->
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 4,
-        spaceBetween: 30,
-        slidesPerGroup: 1,
-        breakpoints: {
-          500: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-          },
-          680: {
-            slidesPerView: 2,
-            spaceBetween: 40,
-          },
-          920: {
-            slidesPerView: 2,
-            spaceBetween: 40,
-          },
-          1240: {
-            slidesPerView: 4,
-            spaceBetween: 50,
-          },
-        },
-        loop: true,
-        loopFillGroupWithBlank: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-    </script>
   </body>
 </html>
