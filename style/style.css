@@ -141,6 +141,10 @@ nav {
 
 /* Swiper */
 
+.products {
+  padding: 5%;
+}
+
 .swiper {
   width: 80%;
   height: 100%;
@@ -446,7 +450,11 @@ footer h4 {
 
   /* Swiper */
   .imgslide button {
-    font-size: 3vh;
+    font-size: 2vh;
+  }
+  
+  .products {
+    padding: 0;
   }
 
   /* Productos */
