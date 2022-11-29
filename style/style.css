@@ -83,12 +83,12 @@ nav {
   width: 50vw;
   margin: 0 auto;
   padding: 2%;
-} 
+}
 
 .about-text h4 {
   letter-spacing: 2px;
   font-size: 15px;
-  font-family: "Raleway", sans-serif; 
+  font-family: "Raleway", sans-serif;
 }
 
 .about-text h2 {
@@ -374,6 +374,8 @@ footer h4 {
     background: #fff;
   }
 
+  /* Main Container */
+
   .main-container {
     align-items: center;
     margin: 0;
@@ -398,6 +400,7 @@ footer h4 {
     display: none;
   }
 
+  /* About Container */
   .about-section {
     width: 100%;
     display: flex;
@@ -440,6 +443,13 @@ footer h4 {
   .workshop-bg {
     width: 100%;
   }
+
+  /* Swiper */
+  .imgslide button {
+    font-size: 3vh;
+  }
+
+  /* Productos */
   .containercarrito {
     margin-top: 20%;
     padding-left: 0;
@@ -455,10 +465,9 @@ footer h4 {
     gap: 0;
   }
 
-  
-#store {
-  width: 100%;
-} 
+  #store {
+    width: 100%;
+  }
   #carritoDetails {
     width: 420px;
     position: fixed;
@@ -485,10 +494,9 @@ footer h4 {
     flex-direction: column;
     align-items: stretch;
   }
-  
-.autor { 
-  font-size: 13px;
-  width: 50%;
-}
 
+  .autor {
+    font-size: 13px;
+    width: 50%;
+  }
 }

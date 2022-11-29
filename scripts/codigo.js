@@ -78,7 +78,7 @@ function renderizarSwiper(productos) {
       spaceBetween: 30,
       slidesPerGroup: 3,
       breakpoints: {
-        400: {
+        0: {
           slidesPerView: 1,
           spaceBetween: 10,
           slidesPerGroup: 1,
@@ -116,7 +116,11 @@ function renderizarSwiper(productos) {
 //Función añadir producto a carrito
 
 function agregarProducto(evento) {
-  let prod = baseDeDatos.filter((itemBaseDatos) => { return itemBaseDatos.id === parseInt(evento.target.getAttribute("marcador")); });
+  let prod = baseDeDatos.filter((itemBaseDatos) => {
+    return (
+      itemBaseDatos.id === parseInt(evento.target.getAttribute("marcador"))
+    );
+  });
   if (prod.length > 0) {
     carrito.push(prod[0].id);
     renderizarCarrito();
@@ -153,7 +157,7 @@ function renderizarCarrito() {
     DOMcarrito.prepend(liNoElements);
   }
 
-// No duplicar productos en el carrito
+  // No duplicar productos en el carrito
   const carritoSinDuplicados = [...new Set(carrito)];
   carritoSinDuplicados.forEach((item) => {
     const searchedItem = baseDeDatos.filter((itemBaseDatos) => {
@@ -172,7 +176,7 @@ function renderizarCarrito() {
       label.textContent = `${numeroUnidadesItem} x ${searchedItem[0].title} - ${divisa}${searchedItem[0].price}`;
       listItem.appendChild(label);
 
-  // Botón de borrar
+      // Botón de borrar
       const deleteBtn = document.createElement("button");
       deleteBtn.classList.add("btn", "btn-outline-danger", "mx-2");
       const trashicon = document.createElement("i");
@@ -190,7 +194,7 @@ function renderizarCarrito() {
     }
   });
 
-// Precio total
+  // Precio total
   DOMtotal.textContent = calcularTotal();
 }
 
@@ -258,12 +262,12 @@ function cargarCarritoDeLocalStorage() {
 }
 
 //DOMContentLoaded
-  document.addEventListener("DOMContentLoaded", () => {
-    async function obtenerProductos() {
-      return await fetch("scripts/database.js").then((res) => res.json());
+document.addEventListener("DOMContentLoaded", () => {
+  async function obtenerProductos() {
+    return await fetch("scripts/database.js").then((res) => res.json());
   }
 
-// Variables
+  // Variables
 
   const DOMbotonVaciar = document.getElementById("boton-vaciar");
   const DOMbotonFinalizar = document.getElementById("boton-finalizar");
@@ -273,11 +277,11 @@ function cargarCarritoDeLocalStorage() {
   DOMswiper = document.getElementById("swiper");
   DOMtotal = document.getElementById("total");
 
-// Eventos
+  // Eventos
   DOMbotonVaciar.addEventListener("click", vaciarCarrito);
   DOMbotonFinalizar.addEventListener("click", finalizarCompra);
 
-// Inicio
+  // Inicio
   obtenerProductos().then((productos) => {
     baseDeDatos = productos;
     renderizarSwiper(productos);
@@ -286,7 +290,7 @@ function cargarCarritoDeLocalStorage() {
     renderizarCarrito();
   });
 
-//Agregar efecto al scrollear en navbar
+  //Agregar efecto al scrollear en navbar
 
   let nav = document.querySelector("nav");
   window.addEventListener("scroll", function () {
