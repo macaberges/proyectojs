@@ -60,13 +60,14 @@ function renderizarSwiper(productos) {
       const divSwiperSlide = document.createElement("div");
       divSwiperSlide.classList.add("swiper-slide");
       divSwiperSlide.innerHTML = `<div class="indexcard">
-      <div class="imgslide">
-        <img src="${prod.image}"/>
-        <h4 class="indexcard-title pt-3">${prod.title}</h4>
-           <button class="btn btn-outline mx-auto w-100" 
-           marcador="${prod.id}" onclick="agregarProducto(event)">Add to Cart
+        <div class="imgslide">
+          <img src="${prod.image}"/>
+          <h4 class="indexcard-title pt-3">${prod.title}</h4>
+          <button class="btn btn-outline mx-auto w-100" 
+          marcador="${prod.id}" onclick="agregarProducto(event)">
+            Add to Cart
           </button>
-      </div> 
+        </div> 
       </div>`;
 
       divWrapper.appendChild(divSwiperSlide);
@@ -146,7 +147,6 @@ function agregarProducto(evento) {
 //Función renderizar productos en carrito
 
 function renderizarCarrito() {
-  // Vacía todo el html
   DOMcarrito.textContent = "";
   const liNoElements = document.createElement("li");
   liNoElements.setAttribute("id", "noElements");
@@ -188,24 +188,25 @@ function renderizarCarrito() {
       deleteBtn.style.float = "right";
       deleteBtn.dataset.item = item;
       deleteBtn.addEventListener("click", borrarItemCarrito);
-
       listItem.appendChild(deleteBtn);
       DOMcarrito.appendChild(listItem);
     }
   });
 
+  
+
+  //Borrar elemento del carrito (evento)
+  function borrarItemCarrito(evento) {
+    const id = parseInt(evento.target.dataset.item) ;
+    carrito = carrito.filter((carritoId) => {
+      return carritoId !== id;
+    });
+    renderizarCarrito();
+    guardarCarritoEnLocalStorage();
+  }
+
   // Precio total
   DOMtotal.textContent = calcularTotal();
-}
-
-//Borrar elemento del carrito (evento)
-function borrarItemCarrito(evento) {
-  const id = evento.target.dataset.item;
-  carrito = carrito.filter((carritoId) => {
-    return carritoId !== id;
-  });
-  renderizarCarrito();
-  guardarCarritoEnLocalStorage();
 }
 
 //Función precio total teniendo en cuenta los productos repetidos
